@@ -38,5 +38,63 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navItems = document.querySelectorAll('a');
+navItems.forEach((navItem, index) => {
+  navItem.innerText = siteContent['nav'][`nav-item-${index + 1}`];
+  })
+
+const textContents = document.querySelectorAll('.text-content')
+
+// const textContentsDOM = document.querySelectorAll('.cta-text');
+// textContents[0].querySelector('h1').innerText = siteContent["cta"]["h1"]
+
+const ctaLogo = document.getElementById("cta-img");
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+
+const textContentsFeatures = document.querySelectorAll('.text-content');
+textContents[0].querySelector('h4').innerText = siteContent["main-content"]["features-h4"];
+
+const textContentsFeaturesPara = document.querySelectorAll('.text-content');
+textContents[0].querySelector('p').innerText = siteContent["main-content"]["features-content"];
+
+const textContentsAbout = document.querySelectorAll('.text-content');
+textContents[1].querySelector('h4').innerText = siteContent["main-content"]["features-h4"];
+
+const textContentsAboutPara = document.querySelectorAll('.text-content');
+textContents[1].querySelector('p').innerText = siteContent["main-content"]["features-content"];
+
+const middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const textContentsServices = document.querySelectorAll('.text-content');
+textContents[2].querySelector('h4').innerText = siteContent["main-content"]["services-h4"];
+
+const textContentsServicesPara = document.querySelectorAll('.text-content');
+textContents[2].querySelector('p').innerText = siteContent["main-content"]["features-content"];
+
+const textContentsProduct = document.querySelectorAll('.text-content');
+textContents[3].querySelector('h4').innerText = siteContent["main-content"]["product-h4"];
+
+const textContentsProductPara = document.querySelectorAll('.text-content');
+textContents[3].querySelector('p').innerText = siteContent["main-content"]["product-content"];
+
+const textContentsVision = document.querySelectorAll('.text-content');
+textContents[4].querySelector('h4').innerText = siteContent["main-content"]["vision-h4"];
+
+const textContentsVisionPara = document.querySelectorAll('.text-content');
+textContents[4].querySelector('p').innerText = siteContent["main-content"]["vision-content"];
+
+const textContentsContact = document.querySelector('.contact');
+textContents[0].querySelector('h4').innerText = siteContent["contact"]["contact-h4"];
+
+// const textContentsAddress = document.querySelectorAll('.contact');
+// textContents[0].querySelector('p').innerText = siteContent["contact"]["address"];
+
+// const textContentsPhone = document.querySelectorAll('.contact');
+// textContents[1].querySelector('p').innerText = siteContent["contact"]["phone"];
+
+// const textContentsEmail = document.querySelectorAll('.contact');
+// textContents[2].querySelector('p').innerText = siteContent["contact"]["contact-h4"];
